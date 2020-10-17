@@ -116,7 +116,7 @@ public class Model {
     /**
      * @param firstName     Sets a new First Name for the Model, firstName must be between 3 and 20 characters
      */
-    public void setFirstName(String firstName) {
+    public final void setFirstName(String firstName) {
         if (firstName.length() >= 3 && firstName.length() <= 20) {
             this.firstName = firstName;
         } else {
@@ -127,7 +127,7 @@ public class Model {
     /**
      * @param lastName      Sets a new Last Name for the Model, lastName must be between 3 and 20 characters
      */
-    public void setLastName(String lastName) {
+    public final void setLastName(String lastName) {
         if (lastName.length() >= 3 && lastName.length() <= 20) {
             this.lastName = lastName;
         } else {
