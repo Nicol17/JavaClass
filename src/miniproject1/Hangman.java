@@ -17,7 +17,7 @@ public class Hangman {
         while (text.hasNext()) {
             cityList.add(text.nextLine());
         }
-        System.out.println(cityList);
+//        System.out.println(cityList);
 
         // Select a random city from the array and display it
         String randomWord = cityList.get((int) (Math.random() * cityList.size()));
@@ -77,13 +77,13 @@ public class Hangman {
                     contains = true;
                     System.out.print("You're right! ");
                     hiddenWord[i] = randomWord.toCharArray()[i];
-                    usedChars.concat(letter);
+                    usedChars += letter + " ";
                 }
             } // Keep track of errors
             if (valid && !contains) {
                 System.out.print("Wrong! ");
                 chances -= 1;
-                usedChars.concat(letter);
+                usedChars += letter + " ";
             }
             System.out.println(usedChars);
             System.out.println("You have (" + chances + ") chances left");
