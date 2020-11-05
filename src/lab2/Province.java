@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class Province {
     // Blueprint
-    private static String province;
-    private static String capital;
-    private static long population;
+    private String province;
+    private String capital;
+    private long population;
 
     //CONSTANTS
     public static final long DEFAULT_POPULATION = 4648055;
@@ -28,9 +28,9 @@ public class Province {
             setCapital(capital);
             setPopulation(population);
         } else {
-            Province.population = DEFAULT_POPULATION;
-            Province.province = DEFAULT_PROVINCE;
-            Province.capital = DEFAULT_CAPITAL;
+            this.population = DEFAULT_POPULATION;
+            this.province = DEFAULT_PROVINCE;
+            this.capital = DEFAULT_CAPITAL;
         }
     }
 
@@ -51,25 +51,25 @@ public class Province {
 
     public void setProvince(String province) {
         if (isValidProvince(province)) {
-            Province.province = province;
+            this.province = province;
         } else {
-            Province.province = DEFAULT_PROVINCE;
+            this.province = DEFAULT_PROVINCE;
         }
     }
 
     public void setCapital(String capital) {
         if (isValidCapitalCity(capital)) {
-            Province.capital = capital;
+            this.capital = capital;
         } else {
-            Province.capital = DEFAULT_CAPITAL;
+            this.capital = DEFAULT_CAPITAL;
         }
     }
 
     public void setPopulation(long population) {
         if(isValidPopulation(population)) {
-            Province.population = population;
+            this.population = population;
         } else {
-            Province.population = DEFAULT_POPULATION;
+            this.population = DEFAULT_POPULATION;
         }
     }
 
@@ -102,7 +102,7 @@ public class Province {
 
 
     // Methods
-    public static String getDetails() {
+    public String getDetails() {
         return String.format("The capital of " + province + " (population. " + population + ") is " + capital);
     }
 }

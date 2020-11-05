@@ -33,6 +33,7 @@ public class Driver {
     Pawn p3 = new Pawn(false, false);
     Pawn p4 = new Pawn(false, true, new Queen(true));
     Pawn p5 = new Pawn(true, true, new Knight(true));
+    
 
     // 4.-
     System.out.println(p1.equals(p2));
@@ -40,6 +41,7 @@ public class Driver {
     System.out.println(p1.equals(p5));
     System.out.println(p2.equals(p3));
     System.out.println(p4.equals(p5));
+    p4.move();
 
   }
 

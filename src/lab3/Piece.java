@@ -1,6 +1,6 @@
 package lab3;
 
-abstract class Piece {
+public abstract class Piece {
   protected int value;
   protected boolean isWhite;
 
@@ -25,7 +25,7 @@ abstract class Piece {
 
   // Method
 
-  abstract void move();
+  public abstract void move();
 
   // Overrides
   @Override

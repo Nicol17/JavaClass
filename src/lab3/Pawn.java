@@ -2,7 +2,7 @@ package lab3;
 
 public class Pawn extends Piece {
   private boolean promoted;
-  Piece newPiece;
+  private Piece newPiece;
 
   public Pawn(boolean isWhite) {
     super(isWhite);
